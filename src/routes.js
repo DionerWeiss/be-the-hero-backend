@@ -6,6 +6,10 @@ const SessionController = require('./controllers/SessionController')
 
 const routes = express.Router()
 
+routes.get('/', function(req, res){
+   res.redirect('/incidents');
+});
+
 routes.post('/session', SessionController.create)
 
 routes.get('/ongs', OngController.index)
