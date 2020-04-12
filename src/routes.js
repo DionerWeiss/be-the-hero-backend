@@ -8,6 +8,10 @@ const SessionController = require('./controllers/SessionController')
 
 const routes = express.Router()
 
+routes.get('/', function(req, res){
+   res.json({ msg: "bem-vindo" });
+});
+
 routes.post('/session', SessionController.create)
 
 routes.get('/ongs', OngController.index)
